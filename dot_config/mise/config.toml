@@ -1,0 +1,10 @@
+[tools]
+#bat = "latest"
+btop = "1.4.4"
+chezmoi = "2.69.4"
+#fd = "10.2.0"
+#fzf = "0.62.0"
+github-cli = "2.82.1"
+#lsd = "latest"
+#lazygit = "latest"
+starship = "1.24.1"
