@@ -3,12 +3,15 @@
 <https://www.chezmoi.io/quick-start/>
 
 ```sh
+# Update from remote source
 chezmoi update
 ```
 
 ```sh
 chezmoi add ~/.bashrc
 chezmoi edit ~/.bashrc
+
+chezmoi edit ~/.gitconfig
 
 # See what is yet to change
 chezmoi git status
@@ -17,9 +20,14 @@ chezmoi git status
 chezmoi git add .
 
 # Once happy, commit changes
-chezmoi cd
 
-# If missing
+# Using chezmoi wrappers
+chezmoi git status
+chezmoi git commit -m "Your commit message"
+chezmoi git push
+
+# If manual is needed
+chezmoi cd
 git status
 git remote add origin https://github.com/$GITHUB_USERNAME/dotfiles.git
 git config --global user.email "powareverb@gmail.com"
@@ -28,9 +36,6 @@ git commit -m "Your commit message"
 git push -u origin main
 exit
 
-# Or using chezmoi wrappers
-chezmoi git commit -m "Your commit message"
-chezmoi git push
 ```
 
 ```sh

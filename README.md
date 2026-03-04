@@ -27,5 +27,6 @@
 
 ```sh
 export GITHUB_USERNAME="powareverb"
+cd ~
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME
 ```
