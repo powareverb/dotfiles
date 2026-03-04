@@ -16,11 +16,14 @@
  && sudo apt update \
  && sudo apt install gh -y
 
+ # Or using snap (note is problematic in older Ubuntu)
+ sudo snap install gh --classic
+
  # Then auth
  gh auth login
 ```
 
-## Bootstrap other tools
+## Bootstrap other tools using Chezmoi
 
 ```sh
 export GITHUB_USERNAME="powareverb"
