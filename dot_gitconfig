@@ -1,6 +1,6 @@
 [user]
         email = powareverb@gmail.com
-        name = Gavin Jones
+        name = powareverb
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
