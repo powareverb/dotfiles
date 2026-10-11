@@ -1,13 +1,13 @@
 [tools]
-aws-cli = "2.15.0"
-btop = "1.4.4"
-chezmoi = "2.69.4"
-docker-cli = "29.2.1"
-dotnet = "9.0.311"
-github-cli = "2.87.3"
+aws-cli = { version = "2.37.12", symlink_bins = "true" }
+btop = "1.4.7"
+chezmoi = "2.73.0"
+docker-cli = "29.9.0"
+dotnet = "10.0.401"
+github-cli = "2.102.0"
 just = "latest"
-powershell-core = "7.5.4"
-starship = "1.24.1"
+powershell-core = "7.6.6"
+starship = "1.26.0"
 
 [settings]
 lockfile = true
