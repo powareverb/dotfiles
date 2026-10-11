@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# config.toml hash: {{ include "dot_config/mise/config.toml" | sha256sum }}
+
+echo "🔄 mise configuration change detected. Updating toolchains..."
+
+# Ensure mise is trusted and install missing plugins/tools
+if command -v mise &> /dev/null; then
+    mise trust "$HOME/.config/mise/config.toml"
+    mise install --verbose
+else
+    echo "⚠️ mise binary not found. Skipping tool installation until next pass."
+fi

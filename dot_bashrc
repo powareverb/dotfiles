@@ -118,6 +118,9 @@ fi
 
 eval $($HOME/wsl2-ssh-agent)
 
+# Activate mise
+eval "$(mise activate)"
+
 export PATH="/home/gavin/.dotnetup:$PATH"
 
 # dotnetup: begin
