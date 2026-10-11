@@ -1,3 +1,17 @@
 
+# Chez and mise
+alias activate-mise='eval "$(mise activate)"'
+alias activate-starship='eval "$(starship init bash)"'
 alias chez='chezmoi'
 alias chezup='chezmoi update'
+alias refreshenv='source ~/.bash_profile'
+
+# Hardware checks
+alias cpuinfo='lscpu'
+alias meminfo='free -h'
+alias diskinfo='df -h'
+alias gpuinfo='lspci | grep -i --color "vga\|3d\|2d"'
+alias usbinfo='lsusb'
+alias netinfo='ifconfig -a'
+alias batteryinfo='upower -i $(upower -e | grep BAT)'
+
