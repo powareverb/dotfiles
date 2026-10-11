@@ -25,3 +25,22 @@ fi
 if [ -x "/home/linuxbrew/.linuxbrew/bin/brew" ] ; then
     eval "$($HOME/.linuxbrew/bin/brew shellenv)"
 fi
+
+# Activate SSH agent for WSL
+if [ -x "$HOME/wsl2-ssh-agent" ] ; then
+    eval "$($HOME/wsl2-ssh-agent)"
+fi
+
+# Activate mise
+eval "$(mise activate)"
+
+# Activate starship
+eval "$(starship init bash)"
+
+export PATH="$HOME/.dotnetup:$PATH"
+
+# dotnetup: begin
+if [ -x '$HOME/.dotnetup/dotnetup' ]; then
+    eval "$('$HOME/.dotnetup/dotnetup' print-env-script --shell bash)"
+fi
+# dotnetup: end
