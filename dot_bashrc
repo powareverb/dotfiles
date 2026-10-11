@@ -115,3 +115,13 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+eval $($HOME/wsl2-ssh-agent)
+
+export PATH="/home/gavin/.dotnetup:$PATH"
+
+# dotnetup: begin
+if [ -x '/home/gavin/.dotnetup/dotnetup' ]; then
+    eval "$('/home/gavin/.dotnetup/dotnetup' print-env-script --shell bash)"
+fi
+# dotnetup: end
