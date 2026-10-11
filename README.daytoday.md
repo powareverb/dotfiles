@@ -2,12 +2,31 @@
 
 <https://www.chezmoi.io/quick-start/>
 
+Update from remote source
+
 ```sh
 # Update from remote source
 chezmoi update
+# Alias: chezup
+```
+
+Activate mise/starship with chezmoi (should auto activate in bashrc, but here as a backup)
+
+```sh
+source ~/.bash_profile
+# Alias: refreshenv
+
+# Activate mise
+eval "$(mise activate)"
+# Alias: activate-mise
+
+# Activate starship
+eval "$(starship init bash)"
+# Alias: activate-starship
 ```
 
 ```sh
+# Do some things
 chezmoi add ~/.bashrc
 chezmoi edit ~/.bashrc
 
@@ -18,6 +37,16 @@ chezmoi git status
 
 # Add any untracked files
 chezmoi git add .
+
+# Something is different locally?
+chezmoi diff
+chezmoi status
+
+# Shows differences in .bashrc
+> diff --git a/.bashrc b/.bashrc
+
+# Add the change to chez
+chezmoi add ~/.bashrc
 
 # Once happy, commit changes
 
@@ -39,7 +68,10 @@ exit
 ```
 
 ```sh
-# Check incoming changes
+# Check upstream changes
+chezmoi update
+
+# Check incoming changes - manwelly
 chezmoi git pull -- --autostash --rebase && chezmoi diff
 
 # Check latest
