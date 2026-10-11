@@ -20,11 +20,12 @@ fi
 
 if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
     PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+
+    if [ -x "/home/linuxbrew/.linuxbrew/bin/brew" ] ; then
+        eval "$($HOME/.linuxbrew/bin/brew shellenv)"
+    fi
 fi
 
-if [ -x "/home/linuxbrew/.linuxbrew/bin/brew" ] ; then
-    eval "$($HOME/.linuxbrew/bin/brew shellenv)"
-fi
 
 # Activate SSH agent for WSL
 if [ -x "$HOME/wsl2-ssh-agent" ] ; then
