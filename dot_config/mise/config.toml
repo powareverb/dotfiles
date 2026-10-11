@@ -5,6 +5,7 @@ chezmoi = "2.69.4"
 docker-cli = "29.2.1"
 dotnet = "9.0.311"
 github-cli = "2.87.3"
+just = "latest"
 powershell-core = "7.5.4"
 starship = "1.24.1"
 
