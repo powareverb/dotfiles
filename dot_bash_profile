@@ -22,4 +22,6 @@ if [ -d "/home/linuxbrew/.linuxbrew/bin" ] ; then
     PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 fi
 
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+if [ -x "/home/linuxbrew/.linuxbrew/bin/brew" ] ; then
+    eval "$($HOME/.linuxbrew/bin/brew shellenv)"
+fi
